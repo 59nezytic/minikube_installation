@@ -2,7 +2,7 @@
 
 HOSTNAME=$(hostname)
 
-sed -i "s/localhost/"${HOSTNAME}"/g" /etc/hosts
+sed -i "1s/localhost/"${HOSTNAME}"/g" /etc/hosts
 
 ### Translate sources
 sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
