@@ -54,8 +54,8 @@ sudo apt install conntrack
 
 minikube start --vm-driver=none
 
-MINIKUBE_VERSION=$(ls .minikube/cache/linux)
+MINIKUBE_VERSION=$(ls /root/.minikube/cache/linux/amd64)
 
-mv .minikube/cache/linux/${MINIKUBE_VERSION}/kubectl /usr/local/bin/
+mv /root/.minikube/cache/linux/amd64/${MINIKUBE_VERSION}/kubectl /usr/local/bin/
 
 sudo chown -R $USER $HOME/.kube $HOME/.minikube
